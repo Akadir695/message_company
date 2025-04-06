@@ -3,4 +3,4 @@ from .models import Post
 
 def post_list(request):
     posts = Post.objects.all()  # Get all posts from the database
-    return render(request, "blog_posts/postlist.html", {"posts": posts})  # Corrected template path
+    return render(request, "blog_posts/postlist.html", {"posts": posts},)  # Corrected template path
