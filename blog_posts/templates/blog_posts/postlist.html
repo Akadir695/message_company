@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog Posts</title>
+</head>
+<body>
+    <h1>Blog Posts</h1>
+    <ul>
+        {% for post in posts %}
+            <li>
+                <h2>{{ post.title }}</h2>  <!-- Display the title of each post -->
+                <p>{{ post.text }}</p>  <!-- Display the content (text) of each post -->
+            </li>
+        {% empty %}
+            <li>No posts available.</li>  <!-- If there are no posts -->
+        {% endfor %}
+    </ul>
+</body>
+</html>
